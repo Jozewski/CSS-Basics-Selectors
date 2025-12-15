@@ -37,17 +37,17 @@ Add explicit color declarations to the specific selectors:
 css/* Before (broken) */
 header h1 {
     font-size: 2.5rem;
-    /* No color - was inheriting white from header */
-}
+        /* No color - was inheriting white from header */
+        }
 
-/* After (fixed) */
-header h1 {
-    font-size: 2.5rem;
-    color: white; /* Explicit declaration */
-}
-This works because of specificity:
+        /* After (fixed) */
+        header h1 {
+            font-size: 2.5rem;
+                color: white; /* Explicit declaration */
+                }
+                This works because of specificity:
 
-header h1 (specificity: 0,0,2) beats h1 (specificity: 0,0,1)
-More specific selectors always win
+                header h1 (specificity: 0,0,2) beats h1 (specificity: 0,0,1)
+                More specific selectors always win
 
-Key Takeaway: When adding base styles, always check if any elements rely on inheritance rather than explicit declarations, and add those explicit declarations to the more specific selectors.
+                Key Takeaway: When adding base styles, always check if any elements rely on inheritance rather than explicit declarations, and add those explicit declarations to the more specific selectors.
